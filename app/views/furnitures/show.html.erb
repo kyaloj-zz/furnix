@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Shop:</strong>
+  <%= @furniture.shop_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @furniture.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @furniture.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @furniture.image %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @furniture.price %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @furniture.stock %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @furniture.category %>
+</p>
+
+<p>
+  <strong>Delivery:</strong>
+  <%= @furniture.delivery %>
+</p>
+
+<%= link_to 'Edit', edit_furniture_path(@furniture) %> |
+<%= link_to 'Back', furnitures_path %>
