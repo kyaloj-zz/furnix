@@ -104,7 +104,10 @@ body{
 	border:none;
 	width: 50px;
 }*/
-
+.borders{
+	border-style: groove;
+	min-height: 200px;
+}
 
 
 
