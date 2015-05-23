@@ -1,1 +1,49 @@
+<div class="container">
 
+  <!-- a catchy background -->
+	<div class="row" id="main_page">
+		<h2>Your one stop shop for all of your furniture</h2>
+	</div>
+
+   <!-- top 5 rated furniture -->
+
+	<div class="row">
+		<h2>Most popular design</h2>
+	</div>
+
+	<div class="row">
+		
+  
+  
+    <% @furnitures.each do |furniture| %>
+      <div class="col-md-2">
+        
+        <p>Title: <%= furniture.title %></p>
+        
+        <p><%= furniture.image %></p>
+        <p>Price:<%= furniture.price %></p>
+       
+        <p>Delivery?<%= furniture.delivery %></p>
+       
+     </div>
+    <% end %>
+ 
+		<p>see more</p>
+	</div>
+   <!--  top 5 rated carpenters -->
+	<div class="row">
+		<h2>Top rated carpenters</h2>
+	</div>
+
+	<div class="row">
+		<% @shops.each do |shop| %>
+        <div class="col-md-2">
+        <p>Name:<%= shop.name %></p>
+        <p>Location:<%= shop.location %></p>
+        <p>Shop Owner:<%= shop.user_id %></p>
+        </div>
+        
+         <% end %>
+		<p>see more</p>
+	</div>
+</div>

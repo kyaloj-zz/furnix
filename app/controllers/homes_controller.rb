@@ -3,6 +3,9 @@ class HomesController < ApplicationController
 
   def index
     @homes = Home.all
+    @furnitures = Furniture.all
+    @shops = Shop.all
+
   end
 
   
