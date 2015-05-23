@@ -9,7 +9,7 @@
   
     <% @furnitures.each do |furniture| %>
       <div class="col-md-3">
-        <p><%= furniture.image %></p>
+        <p><%= image_tag furniture.avatar.url %></p>
         <p>Title:<%= furniture.title %></p>
         <p>Price in Ksh:<%= furniture.price %></p>
         <p><%= link_to 'Show', furniture %></p>

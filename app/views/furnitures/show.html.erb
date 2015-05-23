@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @furniture.avatar.url %>
+</p>
+
 <p>
   <strong>Shop:</strong>
   <%= @furniture.shop_id %>
@@ -15,10 +21,7 @@
   <%= @furniture.description %>
 </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @furniture.image %>
-</p>
+
 
 <p>
   <strong>Price:</strong>
