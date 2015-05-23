@@ -8,6 +8,7 @@ class FurnituresController < ApplicationController
 
  
   def show
+    
   end
 
   
@@ -57,7 +58,7 @@ class FurnituresController < ApplicationController
   end
 
   private
-    
+    def set_furniture
       @furniture = Furniture.find(params[:id])
     end
 
