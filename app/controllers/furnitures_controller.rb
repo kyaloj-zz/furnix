@@ -1,28 +1,25 @@
 class FurnituresController < ApplicationController
   before_action :set_furniture, only: [:show, :edit, :update, :destroy]
 
-  # GET /furnitures
-  # GET /furnitures.json
+ 
   def index
     @furnitures = Furniture.all
   end
 
-  # GET /furnitures/1
-  # GET /furnitures/1.json
+ 
   def show
   end
 
-  # GET /furnitures/new
+  
   def new
     @furniture = Furniture.new
   end
 
-  # GET /furnitures/1/edit
+ 
   def edit
   end
 
-  # POST /furnitures
-  # POST /furnitures.json
+ 
   def create
     @furniture = Furniture.new(furniture_params)
 
@@ -37,8 +34,7 @@ class FurnituresController < ApplicationController
     end
   end
 
-  # PATCH/PUT /furnitures/1
-  # PATCH/PUT /furnitures/1.json
+ 
   def update
     respond_to do |format|
       if @furniture.update(furniture_params)
@@ -51,8 +47,7 @@ class FurnituresController < ApplicationController
     end
   end
 
-  # DELETE /furnitures/1
-  # DELETE /furnitures/1.json
+ 
   def destroy
     @furniture.destroy
     respond_to do |format|
@@ -62,12 +57,11 @@ class FurnituresController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_furniture
+    
       @furniture = Furniture.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    
     def furniture_params
       params.require(:furniture).permit(:shop_id, :title, :description, :image, :price, :stock, :category, :delivery)
     end
