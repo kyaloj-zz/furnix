@@ -64,6 +64,6 @@ class FurnituresController < ApplicationController
 
     
     def furniture_params
-      params.require(:furniture).permit(:shop_id, :title, :description, :image, :price, :stock, :category, :delivery)
+      params.require(:furniture).permit(:shop_id, :title, :description, :avatar, :price, :stock, :category, :delivery)
     end
 end
