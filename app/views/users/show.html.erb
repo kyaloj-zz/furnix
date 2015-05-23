@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
+<p>
+  <strong>Background image:</strong>
+  <%= image_tag @user.avatar %>
+</p>
 
 <p>
   <strong>Name:</strong>
@@ -10,15 +14,9 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
 
-<p>
-  <strong>Background image:</strong>
-  <%= @user.background_image %>
-</p>
+
+
 
 <p>
   <strong>Gender:</strong>

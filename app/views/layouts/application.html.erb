@@ -15,63 +15,57 @@
 
 <body>
 
-<div class="container-fluid">
-    <!-- Second navbar for search -->
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-3">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+<div class="container">
+
+      
+       
+  <div class="row">
+          <div class="col-md-4">  
             <%= link_to 'Furnix', root_url, :class => 'navbar-brand' %>
-        </div>
+          </div>
     
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-collapse-3">
+      
+        <div class="col-md-8" id="navbar-collapse-3">
+
           <ul class="nav navbar-nav navbar-right">
               <li>
                 <%= link_to "Home", root_url, :class => 'navbar-link'  %>
               </li>
-            <li><a href="#">About</a></li>
-            
-            <li><a href="#">Contact Us</a></li>
-
             
 
-            <li class="dropdown">
-              
-               <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><%= link_to 'My profile'%></li>
-                <li><a href="#">Settings</a></li>
-                <li class="divider"></li>
+            <% if user_signed_in? %>
                 <li>
-                  <%= link_to "Logout" %>
+                 <%= current_user.name %>
+                  
+                  </li>
+                <li>
+                <%= link_to 'My profile', user_path(current_user.id) %>
+                </li>
+
+                
+                
+                <li>
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
                 </li>
               </ul>
-            </li>
-           
-             
-           
-            <li>
-              <a class="btn btn-default btn-outline"  data-toggle="collapse" href="#nav-collapse3" aria-expanded="false" aria-controls="nav-collapse3">Search</a>
-            </li>
-          </ul>
-          <div class="collapse nav navbar-nav nav-collapse" id="nav-collapse3">
-            <form class="navbar-form navbar-right" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search" />
-              </div>
-              <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-            </form>
-          </div>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
-    </nav><!-- /.navbar -->
+
+            
+            <% else %> 
+             <ul>
+              <li>
+                <%= link_to "Login", new_user_session_path %>
+              </li>
+              <li>
+                <%= link_to "Sign up", new_user_registration_path %> 
+              </li>
+
+              </ul>
+
+            <% end %>
+            
+         </div> <!-- for col-md-8   --> 
+      </div> <!-- for row -->
+</div><!-- /.container-fluid -->
 
 <%= yield %>
 

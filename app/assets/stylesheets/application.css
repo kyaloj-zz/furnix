@@ -40,6 +40,26 @@ body{
 	
 }
 
+.the_head{
+	background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6) ), url('/products.jpg');
+   text-align: center;
+   background-size:cover;
+   background-repeat: no-repeat;
+   color: white;
+   height: 300px;
+   padding-top: 10%;
+   width:100%;
+   font-family: 'Lobster', cursive;
+}
+
+.the_images{
+	width: 100%
+}
+
+.the_box{
+	padding: 2%;
+}
+
 #nav_container input[type="text"]{
  /*height: 30px;*/
   /*  margin-top: 5px;

@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 	has_many :shops
 	has_many :comments 
-	has_attached_file :background_image
-    validates_attachment_content_type :background_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
+	has_attached_file :avatar
+    validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png"]
 end

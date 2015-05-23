@@ -1,27 +1,18 @@
+<div class="container">
+
 <p id="notice"><%= notice %></p>
+<header id="shops">
+<h1>All Shops</h1>
 
-<h1>Listing Shops</h1>
+</header>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Location</th>
-      <th>Contact info</th>
-      <th>Age</th>
-      <th>Payment mode</th>
-      <th>User</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div class="row">
     <% @shops.each do |shop| %>
       <tr>
+      <td><%= image_tag shop.avatar.url %></td>
         <td><%= shop.name %></td>
         <td><%= shop.location %></td>
-        <td><%= shop.contact_info %></td>
+        
         <td><%= shop.age %></td>
         <td><%= shop.payment_mode %></td>
         <td><%= shop.user_id %></td>
@@ -34,6 +25,8 @@
   </tbody>
 </table>
 
-<br>
+
 
 <%= link_to 'New Shop', new_shop_path %>
+</div> <!-- row with all shops listed -->
+</div> <!-- the container -->

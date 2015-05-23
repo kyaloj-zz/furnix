@@ -2,22 +2,3 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#product_head{
-	background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6) ), url('/products.jpg');
-   text-align: center;
-   background-size:cover;
-   background-repeat: no-repeat;
-   color: white;
-   height: 300px;
-   padding-top: 10%;
-   width:100%;
-   font-family: 'Lobster', cursive;
-}
-
-.furniture_images{
-	width: 100%
-}
-
-#furniture_box{
-	padding: 2%;
-}
