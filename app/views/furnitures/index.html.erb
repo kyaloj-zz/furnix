@@ -8,7 +8,7 @@
 <div class="row">
   
     <% @furnitures.each do |furniture| %>
-      <div class="col-md-3" class="the_box">
+      <div class="col-md-3 the_box">
         <p><%= image_tag furniture.avatar.url, :class => "the_images"%></p>
         <p>Title:<%= furniture.title %></p>
         <p>Price in Ksh:<%= furniture.price %></p>

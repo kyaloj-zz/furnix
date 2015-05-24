@@ -41,7 +41,7 @@ body{
 }
 
 .the_head{
-	background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6) ), url('/products.jpg');
+   background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6) ), url('/products.jpg');
    text-align: center;
    background-size:cover;
    background-repeat: no-repeat;
@@ -53,11 +53,14 @@ body{
 }
 
 .the_images{
-	width: 100%
+	width: 100%;
+	
+
 }
 
 .the_box{
 	padding: 2%;
+	
 }
 
 #nav_container input[type="text"]{
