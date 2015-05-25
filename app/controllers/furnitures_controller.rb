@@ -11,6 +11,8 @@ class FurnituresController < ApplicationController
     @furniture = Furniture.find(params[:id])
     @comment = Comment.new
     @comment.furniture_id = @furniture.id
+
+
     
   end
 
@@ -26,10 +28,11 @@ class FurnituresController < ApplicationController
  
   def create
     @furniture = Furniture.new(furniture_params)
-
+    @furniture.shop_id = params[:shop_id]
+    
     respond_to do |format|
       if @furniture.save
-        format.html { redirect_to @furniture, notice: 'Furniture was successfully created.' }
+        format.html { redirect_to shop_path(@furniture.shop), notice: 'Furniture was successfully created.' }
         format.json { render :show, status: :created, location: @furniture }
       else
         format.html { render :new }

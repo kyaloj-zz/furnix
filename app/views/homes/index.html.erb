@@ -64,7 +64,19 @@
         <p>Price:<%= furniture.price %></p>
        
         <p>Delivery?<%= furniture.delivery %></p>
-       <p><%= link_to 'Show', furniture %></p>
+
+       <!--  user cant see more details unless signed in  -->
+
+        <% if user_signed_in? %>
+             <p><%= link_to 'Show', furniture %></p>
+      
+
+       <% else %> 
+             
+                <p><%= link_to "More details", new_user_session_path %></p>
+             
+        <% end %>
+
      </div>
     <% end %>
  
@@ -81,7 +93,13 @@
         <p><%= image_tag shop.avatar.url, :class => "the_images"%></p>
         <p>Name:<%= shop.name %></p>
         <p>Location:<%= shop.location %></p>
+
+        <% if user_signed_in? %>
         <p><%= link_to 'Show', shop %></p>
+
+        <% else %>
+           <p><%= link_to "More details", new_user_session_path %></p>
+           <% end %>
         </div>
         
          <% end %>

@@ -38,3 +38,9 @@
 <%= link_to 'Edit', edit_shop_path(@shop) %> |
 <%= link_to 'Back', shops_path %>
 <td><%= link_to 'Destroy', @shop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+
+<h3>Furnitures</h3>
+<%= render partial: 'shops/furniture', collection: @shop.furnitures %>
+
+<%= render partial: 'furnitures/form' %>

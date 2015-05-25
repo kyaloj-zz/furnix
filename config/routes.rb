@@ -2,16 +2,15 @@ Rails.application.routes.draw do
   devise_for :users
   resources :homes
   resources :photos
-  
 
-  resources :furnitures do
-      resources :comments
-      
-   end
-  resources :shops
+  resources :shops do
+        resources :furnitures 
+     end
+
+   
   resources :users
    
-
+  resources :comments
 
    root to: 'homes#index'
   
