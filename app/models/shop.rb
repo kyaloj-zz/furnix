@@ -1,5 +1,6 @@
 class Shop < ActiveRecord::Base
 	has_many :furnitures
+	has_many :comments, through: :furnitures
 	
 	belongs_to :user
 	has_attached_file :avatar 

@@ -1,11 +1,9 @@
-<p><%= image_tag furniture.avatar.url, :class => "the_images" %></p>
-        <p>Title: <%= furniture.title %></p>
+<p><%= image_tag furniture.avatar.url, :class => "the_images"%></p>
+        <p>Title:<%= furniture.title %></p>
+        <p>Price in Ksh:<%= furniture.price %></p>
+
         
-        
-        <p>Price:<%= furniture.price %></p>
+        <p>Shop:<%= furniture.attributes %></p>
+
        
-        <p>Delivery?<%= furniture.delivery %></p>
-
-       <!--  user cant see more details unless signed in  -->
-
-        
+        <p><%= link_to 'Show', furniture %></p>

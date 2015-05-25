@@ -7,7 +7,10 @@
   <%= image_tag @furniture.avatar.url %>
 </p>
 
-
+<p>
+  <strong>Shop Name:</strong>
+  <%= @furniture.shop.name %>
+</p>
 
 <p>
   <strong>Title:</strong>
@@ -40,6 +43,7 @@
   <strong>Delivery:</strong>
   <%= @furniture.delivery %>
 </p>
+
 
 <%= link_to 'Edit', edit_furniture_path(@furniture) %> |
 <%= link_to 'Back', furnitures_path %>

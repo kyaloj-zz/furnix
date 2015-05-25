@@ -4,13 +4,18 @@ Rails.application.routes.draw do
   resources :photos
 
   resources :shops do
-        resources :furnitures 
-     end
+            resources :furnitures 
+                
+           end
 
-   
+  resources :furnitures do
+   resources :comments
+ end
+
+ 
   resources :users
    
-  resources :comments
+  
 
    root to: 'homes#index'
   
