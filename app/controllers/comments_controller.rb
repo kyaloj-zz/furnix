@@ -22,10 +22,11 @@ class CommentsController < ApplicationController
   
   def create
     @comment = Comment.new(comment_params)
+    @comment.furniture_id = params[:furniture_id]
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        format.html { redirect_to furniture_path(@comment.furniture), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }

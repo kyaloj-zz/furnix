@@ -46,6 +46,6 @@
 <%= link_to 'Destroy', @furniture, method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <h3>Comments (<%= @furniture.comments.size %>)</h3>
-<%= render partial: 'products/comment', collection: @furniture.comments %>
+<%= render partial: 'furnitures/comment', collection: @furniture.comments %>
 <%= render partial: 'comments/form' %>
 </div> <!-- the main container -->
