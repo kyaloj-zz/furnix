@@ -68,7 +68,7 @@
        <!--  user cant see more details unless signed in  -->
 
         <% if user_signed_in? %>
-             <p><%= link_to 'Show', furniture %></p>
+             <p><%= link_to 'Show', @shop %></p>
       
 
        <% else %> 
@@ -95,7 +95,7 @@
         <p>Location:<%= shop.location %></p>
 
         <% if user_signed_in? %>
-        <p><%= link_to 'Show', shop %></p>
+        <p><%= link_to 'more details', shop %></p>
 
         <% else %>
            <p><%= link_to "More details", new_user_session_path %></p>
