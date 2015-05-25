@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :furnitures do
       resources :comments
+      
    end
   resources :shops
   resources :users

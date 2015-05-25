@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
   
   def index
     @comments = Comment.all
+
   end
 
   
@@ -23,6 +24,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.furniture_id = params[:furniture_id]
+    @comment.user_id = current_user.id
 
     respond_to do |format|
       if @comment.save
@@ -65,6 +67,6 @@ class CommentsController < ApplicationController
 
     
     def comment_params
-      params.require(:comment).permit(:body, :user_id)
+      params.require(:comment).permit(:body)
     end
 end

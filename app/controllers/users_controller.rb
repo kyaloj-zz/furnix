@@ -8,11 +8,16 @@ class UsersController < ApplicationController
 
   
   def show
+
+    @user = User.find(params[:id])
+    @comment = Comment.new
+    @comment.user_id = @user.id
   end
 
   
   def new
     @user = User.new
+
   end
 
  

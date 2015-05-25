@@ -11,6 +11,7 @@ class FurnituresController < ApplicationController
     @furniture = Furniture.find(params[:id])
     @comment = Comment.new
     @comment.furniture_id = @furniture.id
+    
   end
 
   
