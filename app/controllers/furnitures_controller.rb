@@ -4,6 +4,7 @@ class FurnituresController < ApplicationController
  
   def index
     @furnitures = Furniture.all
+    
   end
 
  

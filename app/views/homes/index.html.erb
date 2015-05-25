@@ -56,7 +56,7 @@
   
   
     <% @furnitures.each do |furniture| %>
-      <div class="col-md-2 the box">
+      <div class="col-md-3 the box">
         <p><%= image_tag furniture.avatar.url, :class => "the_images" %></p>
         <p>Title: <%= furniture.title %></p>
         
@@ -79,17 +79,23 @@
 
      </div>
     <% end %>
+
+    </div>
+
+    <div class="row">
  
 		<p>see more</p>
 	</div>
-   <!--  top 5 rated carpenters -->
+  
 	<div class="row">
 		<h2>Top rated Furniture shops</h2>
 	</div>
 
+     <!--  top 5 rated carpenters -->
+
 	<div class="row">
 		<% @shops.each do |shop| %>
-        <div class="col-md-2 the_box">
+        <div class="col-md-3 the_box">
         <p><%= image_tag shop.avatar.url, :class => "the_images"%></p>
         <p>Name:<%= shop.name %></p>
         <p>Location:<%= shop.location %></p>
@@ -103,6 +109,9 @@
         </div>
         
          <% end %>
+         </div>
+
+   <div class="row">
 		<p>see more</p>
 	</div>
 </div>

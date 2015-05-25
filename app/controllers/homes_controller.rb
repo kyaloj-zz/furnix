@@ -3,8 +3,8 @@ class HomesController < ApplicationController
 
   def index
     @homes = Home.all
-    @furnitures = Furniture.all
-    @shops = Shop.all
+    @furnitures = Furniture.last(4)
+    @shops = Shop.last(4)
 
   end
 

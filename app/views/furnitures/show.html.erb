@@ -6,12 +6,12 @@
   
   <%= image_tag @furniture.avatar.url %>
 </p>
-
+<% if @furniture.shop %>
 <p>
   <strong>Shop Name:</strong>
   <%= @furniture.shop.name %>
 </p>
-
+<% end %>
 <p>
   <strong>Title:</strong>
   <%= @furniture.title %>
