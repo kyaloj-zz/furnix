@@ -33,7 +33,7 @@ class FurnituresController < ApplicationController
     
     respond_to do |format|
       if @furniture.save
-        format.html { redirect_to shop_path(@furniture.shop), notice: 'Furniture was successfully created.' }
+        format.html { redirect_to @furniture, notice: 'Furniture was successfully created.' }
         format.json { render :show, status: :created, location: @furniture }
       else
         format.html { render :new }
