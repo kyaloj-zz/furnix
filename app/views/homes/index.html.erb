@@ -4,13 +4,15 @@
          <%= render 'layouts/navbar' %>
     
 		<h2>Get the best furniture from top class carpenters</h2>
+
+
 	</div>
 
 
  <div class="container"> 
 
 	<!-- how it works -->
-<div class="row howitworks">
+<div class="row topics">
     <h2>How it works</h2>
 </div>
 
@@ -21,7 +23,7 @@
 	   
    <!-- top 5 rated furniture -->
 
-	<div class="row">
+	<div class="row topics">
 		<h2>Most popular design</h2>
 	</div>
 
@@ -30,24 +32,29 @@
   
   
     <% @furnitures.each do |furniture| %>
-      <div class="col-md-3 the box">
+      <div class="col-md-3 the_box">
         <p><%= image_tag furniture.avatar.url, :class => "the_images" %></p>
-        <p>Title: <%= furniture.title %></p>
-        
-        
-        <p>Price:<%= furniture.price %></p>
+
+        <div class="row ">
+
+        <div class="col-md-6">
+           <p> <%= content_tag(:p, furniture.title, :class => "ruby_text_display" )  %></p>
+        </div>
+        <div class="col-md-6">
+           <p> <%= content_tag(:p, "Ksh ".concat(furniture.price.to_s), :class => "ruby_text_display" )  %></p>
+        </div>
+       </div>
        
-        <p>Delivery?<%= furniture.delivery %></p>
 
        <!--  user cant see more details unless signed in  -->
 
         <% if user_signed_in? %>
-             <p><%= link_to 'Show', furniture %></p>
+             <p class="details"><%= link_to 'Details', furniture %></p>
       
 
        <% else %> 
              
-                <p><%= link_to "More details", new_user_session_path %></p>
+                <p class="details"><%= link_to "Details", new_user_session_path %></p>
              
         <% end %>
 
@@ -56,12 +63,12 @@
 
     </div>
 
-    <div class="row">
+    <div class="row more_info">
  
 		<p><%= link_to 'More Furniture', furnitures_path %></p>
 	</div>
   
-	<div class="row">
+	<div class="row topics">
 		<h2>Top rated Furniture shops</h2>
 	</div>
 
@@ -71,21 +78,30 @@
 		<% @shops.each do |shop| %>
         <div class="col-md-3 the_box">
         <p><%= image_tag shop.avatar.url, :class => "the_images"%></p>
-        <p>Name:<%= shop.name %></p>
-        <p>Location:<%= shop.location %></p>
+
+        <div class="row ">
+
+        <div class="col-md-6">
+           <p> <%= content_tag(:p, shop.name, :class => "ruby_text_display" )  %></p>
+        </div>
+        <div class="col-md-6">
+           <p> <%= content_tag(:p, shop.location, :class => "ruby_text_display" )  %></p>
+        </div>
+       </div>
+
 
         <% if user_signed_in? %>
-        <p><%= link_to 'more details', shop %></p>
+        <p class="details"><%= link_to 'more details', shop %></p>
 
         <% else %>
-           <p><%= link_to "More details", new_user_session_path %></p>
+           <p class="details"><%= link_to "More details", new_user_session_path %></p>
            <% end %>
         </div>
         
          <% end %>
          </div>
 
-   <div class="row">
+   <div class="row more_info">
 		<p><%= link_to 'More Shops', shops_path %></p>
 	</div>
 </div>

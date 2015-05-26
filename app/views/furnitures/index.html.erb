@@ -9,16 +9,21 @@
   
     <% @furnitures.each do |furniture| %>
       <div class="col-md-3 the_box">
-        <p><%= image_tag furniture.avatar.url, :class => "the_images"%></p>
-        <p>Title:<%= furniture.title %></p>
-        <p>Price in Ksh:<%= furniture.price %></p>
+        <p><%= image_tag furniture.avatar.url, :class => "the_images" %></p>
 
-        
-        <p>Shop:<%= furniture.attributes %></p>
+        <div class="row ">
 
-       
-        <p><%= link_to 'Show', furniture %></p>
-        
+        <div class="col-md-6">
+           <p> <%= content_tag(:p, furniture.title, :class => "ruby_text_display" )  %></p>
+        </div>
+        <div class="col-md-6">
+           <p> <%= content_tag(:p, "Ksh ".concat(furniture.price.to_s), :class => "ruby_text_display" )  %></p>
+        </div>
+       </div>
+
+       <div class="row more_info">
+             <p><%= link_to 'More Details', furniture %></p>
+        </div>
       </div>
     <% end %>
  

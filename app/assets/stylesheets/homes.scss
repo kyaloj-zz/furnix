@@ -33,11 +33,13 @@
 
 }
 
-.howitworks h2{
+
+
+.topics h2{
    font-size: 40px;
 }
 
-.howitworks{
+.topics{
    margin-top: 5%;
 }
 
@@ -50,6 +52,34 @@
   padding-top: 15%;
 }
 
+.the_box{
+
+	text-decoration: none;
+    color: white;
+    font-family: 'Slabo 27px', serif;
+   
+    padding: 2%;
+   
+}
+
+.details {
+	 border-bottom: 1px solid red;
+}
+
+.ruby_text_display{
+	color: #366775;
+	font-family: 'Slabo 27px', serif;
+}
+
+.more_info{
+	margin-bottom: 20px;
+}
+
+.more_info p{
+	font-size: 20px;
+	font-family: 'Slabo 27px', serif;
+	margin-top: 20px;
+}
 
 
 

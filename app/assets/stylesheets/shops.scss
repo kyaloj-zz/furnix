@@ -2,3 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+#main_page2{
+	
+   
+   
+   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/home2.jpg');
+   text-align: center;
+   background-size:cover;
+   background-repeat: no-repeat;
+   color: white;
+   height: 300px;
+   
+   width:100%;
+   font-family: 'Slabo 27px', serif;
+   margin-bottom: 90px;
+
+  
+
+
+}
+
+
+#main_page2 h2{
+	
+     
+   color: white;
+   font-size: 40px;
+   font-family: 'Slabo 27px', serif;
+
+  
+
+
+}
