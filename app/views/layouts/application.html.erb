@@ -9,63 +9,23 @@
   <%= javascript_include_tag '/bootstrap.min.js' %>
   <%= stylesheet_link_tag    '/snip.css' %>
   <%= stylesheet_link_tag    'http://fonts.googleapis.com/css?family=Open+Sans', media: 'all' %>
+
+  <link href='http://fonts.googleapis.com/css?family=Slabo+27px&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+   <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+    <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
   
 </head>
 
 
 <body>
 
-<div class="container">
 
-      
-       
-  <div class="row">
-          <div class="col-md-4">  
-            <%= link_to 'Furnix', root_url, :class => 'navbar-brand' %>
-          </div>
     
-      
-        <div class="col-md-8" id="navbar-collapse-3">
 
-          <ul class="nav navbar-nav navbar-right">
-              <li>
-                <%= link_to "Home", root_url, :class => 'navbar-link'  %>
-              </li>
-            
-
-            <% if user_signed_in? %>
-                <li>
-                 <%= current_user.name %>
-                  
-                  </li>
-                <li>
-                <%= link_to 'My profile', user_path(current_user.id) %>
-                </li>
-
-                
-                
-                <li>
-                  <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
-                </li>
-              </ul>
-
-            
-            <% else %> 
-             <ul>
-              <li>
-                <%= link_to "Login", new_user_session_path %>
-              </li>
-              <li>
-                <%= link_to "Sign up", new_user_registration_path %> 
-              </li>
-
-              </ul>
-
-            <% end %>
-            
-         </div> <!-- for col-md-8   --> 
-      </div> <!-- for row -->
-</div><!-- /.container-fluid -->
 
 <%= yield %>
 

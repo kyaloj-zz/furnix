@@ -1,9 +1,13 @@
-<div class="container">
-
   <!-- a catchy background -->
-	<div class="row" id="main_page">
-		<h2>Your one stop shop for all of your furniture</h2>
+	<div id="main_page">
+      
+         <%= render 'layouts/navbar' %>
+    
+		<h2>Get the best furniture from top class carpenters</h2>
 	</div>
+
+
+ <div class="container"> 
 
 	<!-- how it works -->
 
@@ -84,7 +88,7 @@
 
     <div class="row">
  
-		<p>see more</p>
+		<p><%= link_to 'More Furniture', furnitures_path %></p>
 	</div>
   
 	<div class="row">
@@ -112,6 +116,6 @@
          </div>
 
    <div class="row">
-		<p>see more</p>
+		<p><%= link_to 'More Shops', shops_path %></p>
 	</div>
 </div>

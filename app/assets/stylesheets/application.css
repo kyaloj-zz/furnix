@@ -22,23 +22,38 @@
 
 body{
 	background-color: #F3F4F8;
+	font-family: 'Slabo 27px', serif;
+	
 }
 
 .container{
     text-align: center;
+    font-family: 'Slabo 27px', serif;
 
 }
 
-#nav_container{
-	padding: 10px 0;
-	width: 100%;
+.furnix_navbar{
+	  background-color: transparent;
+      border-color: transparent;
+      text-decoration: none;
+
 }
-#nav_container form{
-	display: inline-block;
-	width: 100%;
-	margin-top: 7px;
-	
+
+#logo{
+	color:white;
+	font-size: 35px;
+	font-family: 'Slabo 27px', serif;
+
 }
+
+.navbar-default .navbar-nav>li>a{
+	color: white;
+	font-size: 14px;
+
+     font-family: 'Slabo 27px', serif;
+}
+
+
 
 .the_head{
    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6) ), url('/products.jpg');
@@ -47,9 +62,9 @@ body{
    background-repeat: no-repeat;
    color: white;
    height: 300px;
-   padding-top: 10%;
+   font-family: 'Slabo 27px', serif;
    width:100%;
-   font-family: 'Lobster', cursive;
+  
 }
 
 .the_images{
@@ -61,73 +76,11 @@ body{
 
 .the_box{
 	padding: 2%;
-	
+	font-family: 'Slabo 27px', serif;
 }
 
-#nav_container input[type="text"]{
- /*height: 30px;*/
-  /*  margin-top: 5px;
-    border-radius: 3px;*/
-  border: 1px solid #e5e5e5;
-  padding: 5px;
-	width: 80%;
-	background-color: #fff;
-}
 
-#nav_container input[type="submit"]{
-	
-	
-	
-	font-size: 16px;
-	border: 0px solid white;
-	border-radius: 3px;
-	background-color: #3f98bb;
-	color: white;
-	height: 30px;
-	width: 17%;
-}
 
-.logo{
-	padding: 0;
-}
-
-#logo h2{
-	font-size: 30px;
-	color: orange;
-	text-align: center;
-	 margin-top: 10px;
-	 font-weight: bold;
-	
-}
-
-.search_form{
-	display: inline-block;
-	float: left;
-}
-
-.menu_links{
-	padding-top: 10px;
-}
-
-.homes{
-	padding: 10% !important;
-	font-size: 20px;
-}
-.menu_links li{
-	
-	
-  display: inline-block;
-  text-decoration: none;
-  border-right: 1px solid grey;
-  font-size: 18px;
-  color: #888;
-  padding: 0 2%;
-}
-
-/*#nav_container .logout{
-	border:none;
-	width: 50px;
-}*/
 .borders{
 	border-style: groove;
 	min-height: 200px;
