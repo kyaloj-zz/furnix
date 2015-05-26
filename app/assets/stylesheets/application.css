@@ -41,14 +41,14 @@ body{
 
 #logo{
 	color:white;
-	font-size: 35px;
+	font-size: 40px;
 	font-family: 'Slabo 27px', serif;
 
 }
 
 .navbar-default .navbar-nav>li>a{
 	color: white;
-	font-size: 14px;
+	font-size: 16px;
 
      font-family: 'Slabo 27px', serif;
 }
