@@ -46,18 +46,13 @@
        </div>
        
 
-       <!--  user cant see more details unless signed in  -->
+       <!--  user can see more details even if not signed in  -->
 
-        <% if user_signed_in? %>
+        
              <p class="details"><%= link_to 'Details', furniture %></p>
       
 
-       <% else %> 
-             
-                <p class="details"><%= link_to "Details", new_user_session_path %></p>
-             
-        <% end %>
-
+      
      </div>
     <% end %>
 

@@ -2,3 +2,61 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.ruby_text_display1{
+	color: #366775;
+	font-family: 'Slabo 27px', serif;
+	font-size :30px;
+	margin: 20px;
+}
+
+.ruby_text_displayprice{
+	color: green;
+	font-family: 'Slabo 27px', serif;
+	font-size :30px;
+	margin: 20px;
+}
+
+.product_container{
+  margin-top: 6%;
+}
+
+.product_image{
+	height:100%;
+	width:100%;
+}
+
+.back_links{
+    text-align: left;
+	font-family: 'Slabo 27px', serif;
+	font-size :20px;
+}
+
+.back_links1{
+    text-align: center;
+	font-family: 'Slabo 27px', serif;
+	font-size :20px;
+}
+
+.input{
+	margin: 20px 0px;
+	width: 100%;
+}
+
+
+.the_images1{
+	width: 96%;
+	height: 150px;
+	
+
+}
+
+.needsomebreak{
+	margin-top: 30px;
+	border-top: 1px solid red;
+}
+
+.fixme{
+	max-height: 445px;
+	overflow: scroll;
+
+}

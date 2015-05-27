@@ -1,9 +1,4 @@
-<div class="container">
-<div class="row">
-  
-<div col-md-12>
 
-<h3>Post a Comment</h3>
 
 
 <%= form_for [ @furniture, @comment] do |f| %>
@@ -19,24 +14,20 @@
     </div>
   <% end %>
 
+<% if user_signed_in? %>
 
-
-</div>
-</div>
-
-
-  <div class="row col-md-12 field">
-    <%= f.label :body, "comment" %><br>
-    <%= f.text_field :body %>
+ <div class="row col-md-12">
+   <%= f.text_field :body, :placeholder => "What do you think?", :class => "input" %>
   </div>
   
  
 
-  <div class="row actions">
+  <div class=" row col-md-12 actions input">
     <%= f.submit %>
   </div>
+
+  <% else %>
+   <p class= "back_links1"><%= link_to "Login to comment", new_user_session_path %></p>
+  <% end %>
 <% end %>
 
-
-</div>
-</div>

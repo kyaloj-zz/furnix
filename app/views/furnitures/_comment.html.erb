@@ -1,11 +1,26 @@
-<div>
-  <% if comment.user %>
-  <h4><%= comment.user.name %>: </h4>
+<div class="row">
+<hr>
+<div class="col-md-9">
+  <% if comment.user.name? %>
+  <%= content_tag(:h4, comment.user.name.concat(": ").concat(comment.body), :class => "back_links") %>
+     <% else %>
+  <%= content_tag(:h4, comment.user.email.concat(": ").concat(comment.body), :class => "back_links") %>
+  
   <% end %>
-  <p class="comment"><%= comment.body %></p>
-  <% if comment.created_at > Time.now.beginning_of_day %>
+
+</div>
+
+
+
+
+  <div class="col-md-3">
+   <% if comment.created_at > Time.now.beginning_of_day %>
     <%="#{time_ago_in_words(comment.created_at)} ago"%>  
 <% else %>
     <%= comment.created_at.strftime("%b %d, %Y") %> 
 <% end %>
+</div>
+<hr>
+
+
 </div>

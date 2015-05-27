@@ -1,55 +1,114 @@
-<div class="container">
-<p id="notice"><%= notice %></p>
-
-
-<p>
-  
-  <%= image_tag @furniture.avatar.url %>
-</p>
-<% if @furniture.shop %>
-<p>
-  <strong>Shop Name:</strong>
-  <%= @furniture.shop.name %>
-</p>
-<% end %>
-<p>
-  <strong>Title:</strong>
-  <%= @furniture.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @furniture.description %>
-</p>
+<div class="general_navbar">
+<%= render 'layouts/navbar' %>
+</div>
 
 
 
-<p>
-  <strong>Price:</strong>
-  <%= @furniture.price %>
-</p>
+<div class="container product_container">
 
-<p>
-  <strong>Stock:</strong>
-  <%= @furniture.stock %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @furniture.category %>
-</p>
+    <div class="row">
 
-<p>
-  <strong>Delivery:</strong>
-  <%= @furniture.delivery %>
-</p>
+   <!--  left column has a picture and actions links -->
+
+        <div class="col-md-7">
+            <p>
+              <%= image_tag @furniture.avatar.url, :class => "product_image" %>
+            </p>
+          
+
+        </div>
+
+<!-- right column houses the product description -->
+      <div class="col-md-5">
 
 
-<%= link_to 'Edit', edit_furniture_path(@furniture) %> |
-<%= link_to 'Back', furnitures_path %>
-<%= link_to 'Destroy', @furniture, method: :delete, data: { confirm: 'Are you sure?' } %>
 
-<h3>Comments (<%= @furniture.comments.size %>)</h3>
-<%= render partial: 'furnitures/comment', collection: @furniture.comments %>
-<%= render partial: 'comments/form' %>
+        <% if @furniture.shop %>
+       
+        <div class="row col-md-12">
+          
+        <%= content_tag(:p, @furniture.shop.name, :class => "ruby_text_display1" )  %>
+       </div>
+        <% end %>
+       
+         <div class="row col-md-12">
+         <%= content_tag(:p, "Product Name:".concat(@furniture.title), :class => "ruby_text_display1" )  %>
+         </div>
+
+
+       <div class="row col-md-12">
+         <%= content_tag(:p, "Product Description:".concat(@furniture.description), :class => "ruby_text_display1" )  %>
+        </div>
+
+
+         <% if @furniture.stock %>
+         <div class="row col-md-12">
+         <%= content_tag(:p, @furniture.stock.to_s.concat(" available"), :class => "ruby_text_display1" )  %>
+           </div>
+         <% end %>
+
+
+
+        <div class="row col-md-12">
+        <%= content_tag(:p, "About delivery:".concat(@furniture.delivery), :class => "ruby_text_display1" )  %>
+       </div>
+
+       <div class="row col-md-12">
+            <%= content_tag(:p, "Price: Ksh ".concat(@furniture.price.to_s), :class => "ruby_text_displayprice" )  %>
+
+        </div>
+        
+        <div class="col-md-12">
+         <%= link_to 'Go back', furnitures_path, :class => "back_links" %>
+         </div>
+
+       </div> <!-- for the left column -->
+
+    </div> <!-- row for the product and its description -->
+
+
+
+    <div class="row needsomebreak"> <!-- with the comments -->
+
+   
+
+    <div class="col-md-4 fixme">
+
+     <h1 class="back_links1">Comments (<%= @furniture.comments.size %>)</h1>
+    <%= render partial: 'furnitures/comment', collection: @furniture.comments %>
+    <%= render partial: 'comments/form' %>
+    </div>
+
+    <div class="col-md-8 back_links1">
+      <h1>related products</h1>
+
+       <% @furnitures.each do |furniture| %>
+      <div class="col-md-4 the_box">
+        <p><%= image_tag furniture.avatar.url, :class => "the_images1" %></p>
+
+        <div class="row ">
+
+        <div class="col-md-6">
+           <p> <%= content_tag(:p, furniture.title, :class => "ruby_text_display" )  %></p>
+        </div>
+        <div class="col-md-6">
+           <p> <%= content_tag(:p, "Ksh ".concat(furniture.price.to_s), :class => "ruby_text_display" )  %></p>
+        </div>
+       </div>
+       
+
+       <!--  user can see more details even if not signed in  -->
+
+        
+             <p class="details"><%= link_to 'Details', furniture %></p>
+      
+
+      
+     </div>
+    <% end %>
+    </div> 
+
+    </div>
 </div> <!-- the main container -->
