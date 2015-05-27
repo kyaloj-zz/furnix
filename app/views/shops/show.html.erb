@@ -12,7 +12,7 @@
 
        <div class="col-md-3">
 
-          <%= image_tag @shop.avatar.url, :class => "product_image" %>
+          <%= image_tag @shop.avatar.url, :class => "product_image_shop" %>
 
            <% if @shop.user %>
          <div class="row col-md-12">
@@ -61,10 +61,32 @@
      <div class="col-md-9">
 
 
-          <h3>Furnitures</h3>
+
+       <div class="row">
+
+         <div class="col-md-8">
+          <h3 class="back_links2">This Shop has these furnitures</h3>
+          </div>
+        
+          <div class="col-md-4">
+
+          <h1 class="back_links1">Post a New furniture</h1>
+          </div>
+       </div>
+
+
+
+         <div class="row">
+
           <%= render partial: 'shops/furniture', collection: @shop.furnitures %>
 
+          </div>
+
+          <div class="row">
+
           <%= render partial: 'furnitures/form' %>
+
+          </div>
 
      </div> <!-- column 9 with the displayed furniture -->
 
