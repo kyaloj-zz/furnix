@@ -85,12 +85,11 @@
        </div>
 
 
-        <% if user_signed_in? %>
+        
         <p class="details"><%= link_to 'more details', shop %></p>
 
-        <% else %>
-           <p class="details"><%= link_to "More details", new_user_session_path %></p>
-           <% end %>
+        
+          
         </div>
         
          <% end %>
