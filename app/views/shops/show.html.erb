@@ -1,56 +1,73 @@
-
-<div class="general_navbar">
-<%= render 'layouts/navbar' %>
-</div>
-
-
-<div class="container">
+<div id="main_page3">
+      
+         <%= render 'layouts/navbar' %>
+         <h2><%= @shop.name %><h2>
+ </div>
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @shop.name %>
-</p>
+<div class="container">
 
-<p>
-  <strong>Location:</strong>
-  <%= @shop.location %>
-</p>
+<div class="row needsomebreak1">
 
-<p>
-  <strong>Contact info:</strong>
-  <%= @shop.contact_info %>
-</p>
+       <div class="col-md-3">
 
-<p>
-  <strong>Age:</strong>
-  <%= @shop.age %>
-</p>
+          <%= image_tag @shop.avatar.url, :class => "product_image" %>
 
-<p>
-  <strong>Payment mode:</strong>
-  <%= @shop.payment_mode %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @shop.user_id %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @shop.description %>
-</p>
-
-<%= link_to 'Edit', edit_shop_path(@shop) %> |
-<%= link_to 'Back', shops_path %>
-<td><%= link_to 'Destroy', @shop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+           <% if @shop.user %>
+         <div class="row col-md-12">
+         <%= content_tag(:p, "Owner: ".concat(@shop.user_id.to_s), :class => "ruby_text_display2" )  %>
+           </div>
+         <% end %>
 
 
-<h3>Furnitures</h3>
-<%= render partial: 'shops/furniture', collection: @shop.furnitures %>
+         <div class="row col-md-12">
+         <%= content_tag(:p, "Shop Location:".concat(@shop.location), :class => "ruby_text_display2" )  %>
+         </div>
 
-<%= render partial: 'furnitures/form' %>
 
-</div>
+       <div class="row col-md-12">
+         <%= content_tag(:p, "Contact Information:".concat(@shop.contact_info), :class => "ruby_text_display2" )  %>
+        </div>
+
+
+         <% if @shop.age %>
+         <div class="row col-md-12">
+         <%= content_tag(:p, "Years in Operation: ".concat(@shop.age.to_s), :class => "ruby_text_display2" )  %>
+           </div>
+         <% end %>
+
+
+
+        <div class="row col-md-12">
+        <%= content_tag(:p, "Preffered payment mode: ".concat(@shop.payment_mode), :class => "ruby_text_display2" )  %>
+       </div>
+
+       <div class="row col-md-12">
+        <%= content_tag(:p, "About this shop: ".concat(@shop.description), :class => "ruby_text_display2" )  %>
+       </div>
+
+      
+        <div class="row col-md-12 ">
+          
+          <%= link_to 'Edit', edit_shop_path(@shop), :class => "back_links" %> |
+          <%= link_to 'Back', shops_path, :class => "back_links" %>
+
+          </div>
+
+
+      </div> <!-- end of column with shop details -->
+
+     <div class="col-md-9">
+
+
+          <h3>Furnitures</h3>
+          <%= render partial: 'shops/furniture', collection: @shop.furnitures %>
+
+          <%= render partial: 'furnitures/form' %>
+
+     </div> <!-- column 9 with the displayed furniture -->
+
+</div> <!-- the main row -->
+
+</div> <!-- the main container -->
