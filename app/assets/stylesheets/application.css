@@ -40,6 +40,11 @@ body{
 
 }
 
+.general_navbar{
+  background-color: #366775;
+  
+}
+
 #logo{
 	color:white;
 	font-size: 40px;
