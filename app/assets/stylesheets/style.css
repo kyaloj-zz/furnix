@@ -83,7 +83,7 @@ Main components
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: url("../img/icon-small-arrow.svg") no-repeat center center;
+  background: url("/icon-small-arrow.svg") no-repeat center center;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;

@@ -12,7 +12,7 @@
 
        <div class="col-md-3">
 
-          <%= image_tag @shop.avatar.url, :class => "product_image_shop" %>
+          <%= image_tag @shop.avatar.url(:profile), :class => "product_image_sho" %>
 
            <% if @shop.user %>
          <div class="row col-md-12">
@@ -54,6 +54,12 @@
           <%= link_to 'Back', shops_path, :class => "back_links" %>
 
           </div>
+
+          <div class="col-md-12 needsomebreak1">
+            <h1 class="back_links1"><a id="hideitmain"href="#">Post a New furniture</a></h1>
+            <h1 class="back_links1"><a id="showitmain"href="#">Cancel</a></h1>
+
+         </div>
 
 
       </div> <!-- end of column with shop details -->

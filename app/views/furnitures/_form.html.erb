@@ -1,10 +1,5 @@
 
-<div class="col-md-12 needsomebreak1">
-<h1 class="back_links1">Post a New furniture</h1>
-
-</div>
-
-
+<div id="hideit">
 <%= form_for [@shop, @furniture] do |f| %>
   <% if @furniture.errors.any? %>
     <div id="error_explanation">
@@ -55,3 +50,6 @@
     <%= f.submit "post", :class => "right_button" %>
   </div>
 <% end %>
+
+</div> <!-- end of the div to hide -->
+
