@@ -1,29 +1,21 @@
+
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Photos</h1>
+<div class="general_navbar">
+<%= render 'layouts/navbar' %>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Furniture</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container">
 
-  <tbody>
-    <% @photos.each do |photo| %>
-      <tr>
-        <td><%= photo.image %></td>
-        <td><%= photo.furniture_id %></td>
-        <td><%= link_to 'Show', photo %></td>
-        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <!-- how it works -->
+<div class="row topics">
+    <h2>How it works</h2>
+</div>
 
-<br>
 
-<%= link_to 'New Photo', new_photo_path %>
+  <%= render 'layouts/howitworks' %>
+
+
+
+</div>

@@ -131,3 +131,15 @@ footer img{
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+
+
+#goodshops{
+   background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6) ), url('/products.jpg');
+   text-align: center;
+   background-size:cover;
+   background-repeat: no-repeat;
+   color: white;
+   font-family: 'Slabo 27px', serif;
+   
+  
+}

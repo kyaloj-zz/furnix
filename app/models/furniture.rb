@@ -5,7 +5,7 @@ class Furniture < ActiveRecord::Base
 	
 
 
-    has_attached_file :avatar
+    has_attached_file :avatar , :styles => { :profile => "600x600>", :thumb => "300x300>" }
 	validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png"]
     validates_presence_of :title, :description, :avatar, :price, :category, :delivery
 end

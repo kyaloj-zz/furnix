@@ -11,14 +11,6 @@
 
  <div class="container"> 
 
-	<!-- how it works -->
-<div class="row topics">
-    <h2>How it works</h2>
-</div>
-
-
-  <%= render 'layouts/howitworks' %>
-
 	
 	   
    <!-- top 5 rated furniture -->
@@ -26,6 +18,9 @@
 	<div class="row topics">
 		<h2>Most popular products</h2>
 	</div>
+
+
+
 
 	<div class="row">
 		
@@ -68,6 +63,7 @@
 	</div>
 
      <!--  top 5 rated carpenters -->
+     
 
 	<div class="row">
 		<% @shops.each do |shop| %>
@@ -98,4 +94,10 @@
    <div class="row more_info">
 		<p><%= link_to 'More Shops', shops_path, :class => "btn" %></p>
 	</div>
+
+
+
+
+
+  
 </div>
