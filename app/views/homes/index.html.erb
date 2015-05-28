@@ -16,7 +16,7 @@
    <!-- top 5 rated furniture -->
 
 	<div class="row topics">
-		<h2>Most popular products</h2>
+		<h2><strong>Most popular products</strong></h2>
 	</div>
 
 
@@ -27,7 +27,7 @@
   
   
     <% @furnitures.each do |furniture| %>
-      <div class="col-md-3 the_box">
+      <div class="col-md-4 the_box">
         <p><%= image_tag furniture.avatar.url, :class => "the_images" %></p>
 
         <div class="row ">
@@ -59,11 +59,11 @@
 	</div>
   
 	<div class="row topics">
-		<h2>Top rated Furniture shops</h2>
+		<h2><strong>Top rated Furniture shops</strong></h2>
 	</div>
 
      <!--  top 5 rated carpenters -->
-     
+
 
 	<div class="row">
 		<% @shops.each do |shop| %>
