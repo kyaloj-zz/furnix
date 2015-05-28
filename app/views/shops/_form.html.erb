@@ -6,6 +6,14 @@
 
 <div class="container">
 
+<div class="row">
+
+<div class="col-md-2"></div> <!-- just a space -->
+
+<div class="col-md-8">
+
+  <div class="row">
+
 <%= form_for(@shop) do |f| %>
   <% if @shop.errors.any? %>
     <div id="error_explanation">
@@ -19,47 +27,58 @@
     </div>
   <% end %>
 
+
+
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "input back_links", :placeholder => "Name of shop"  %>
   </div>
   <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%= f.text_field :location, :class => "input back_links", :placeholder => "Where is located?" %>
   </div>
   <div class="field">
-    <%= f.label :contact_info %><br>
-    <%= f.text_field :contact_info %>
+    <%= f.text_field :contact_info, :class => "input back_links", :placeholder => "Enter your contacts" %>
   </div>
   <div class="field">
-    <%= f.label :age %><br>
-    <%= f.text_field :age %>
+    <%= f.text_field :age, :class => "input back_links", :placeholder => "How long has it been in operational?" %>
   </div>
   <div class="field">
-    <%= f.label :payment_mode %><br>
-    <%= f.text_field :payment_mode %>
+    <%= f.text_field :payment_mode, :class => "input back_links", :placeholder => "What's your most preffered mode of payment?" %>
   </div>
   
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :class => "input back_links", :placeholder => "Tell us a bit about your shop" %>
   </div>
 
   <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :avatar %>
+    <%= f.file_field :avatar, :class => "input back_links", :placeholder => "Add a picture" %>
   </div>
 
   <div class="field">
-    <%= f.label :background_image %><br>
-    <%= f.file_field :background_image %>
+    <%= f.file_field :background_image, :class => "input back_links", :placeholder => "Add an optional background_image" %>
   </div>
 
 
+  </div> <!-- end of row with those stuff -->
 
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="row">
+
+      <div class="col-md-2">
+      <%= link_to 'Cancel', shops_path, :class => "btn" %>
+      </div>
+
+      <div class="col-md-6"></div>
+       <div class="col-md-4">
+        <%= f.submit "Create Shop", :class => "btn" %>
+        </div>
   </div>
+
 <% end %>
 
+</div> <!-- column with the details -->
+
+<div class="col-md-2"></div> <!-- the other white space
+ -->
+</div> <!-- the main row
+ -->
 </div>
