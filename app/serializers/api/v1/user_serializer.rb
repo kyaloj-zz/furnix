@@ -1,4 +1,4 @@
-class Api::V1::UserSerializer < Api::V1::BaseSerializer
+class Api::V1::UserSerializer < Api::V1::BaseController
   attributes :id, :email, :name,  :activated, :admin, :created_at, :updated_at
               
   has_many :shops
