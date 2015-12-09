@@ -1,10 +1,8 @@
-   <div class="container">
+   <div class="furnix-navbar">
 
-   <div class="row">
+   <div class="container">  
 
-   
-
-   <nav class="navbar navbar-default furnix_navbar">
+   <nav class="navbar navbar-default navbar-fixed-top">
       
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -50,16 +48,13 @@
                 <%= link_to "Login", new_user_session_path %>
               </li>
               <li>
-                <%= link_to "Sign up", new_user_registration_path %> 
+                <%= link_to "Sign up", new_user_registration_path, class: 'btn sign-up' %> 
               </li>
             <% end %>
             
           </ul>
           
-        </div><!-- /.navbar-collapse -->
-     
-    </nav><!-- /.navbar -->
-
-    </div> <!-- the main row -->
-    
-    </div> <!-- the container -->
+        </div>     
+    </nav>
+   </div> 
+ </div>

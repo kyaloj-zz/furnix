@@ -3,79 +3,52 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#main_page{
-   color: white; 
-   width:100%;
-   font-family: 'Slabo 27px', serif;
+.furnix-navbar {
+  margin: 5px 0 -15px 0;  
+  .navbar-default {    
+    border-color: transparent;
+    a#logo {
+      color: #366775;
+      font-size: 32px;
+    }
 
+    .navbar-nav > li > a {
+     color: #366775;
+     font-size: 15px;
+     margin-right: 2%;
+    }
+  }
 
+   a.btn.sign-up {
+        padding: 12%;
+        margin-top: 7%;
+  }
+
+  .navbar-right {
+    margin-right: 15px;
+ }
 }
 
 
-
-#main_page h2{
-	
-  text-align: center;
-  font-size: 50px;
+.the-couresel {
+    .item {
+      img {
+        width: 100%;
+        height: 400px;
+      }
+    }
 }
 
-
-
-.topics h2{
-   font-family: 'Slabo 27px', georgia, serif;
-   margin: 30px;
-   font-style: bold;
-   font-size: 32px;
-  font-weight: 500;
-  text-align: center;
+.text-center {
+  margin-left: 7%;
 }
 
-.topics{
-   margin-top: 5%;
+.menu-bar {
+  border-top: solid 1px #366775;
+  border-bottom: solid 1px #366775;
+  margin: 2% 0;
 }
 
-#selected #selecteds{
-  height: 70px;
-  width: 200px;
-  background-color: #366775;
-  text-decoration: none;
-  color: white;
-  padding-top: 15%;
+.content-row {
+  min-height: 65px;
 }
-
-.the_box{
-
-	text-decoration: none;
-    color: white;
-    font-family: 'Slabo 27px', serif;
-   
-    padding: 2%;
-    border-style: solid;
-
-    
-   
-}
-
-.details {
-	 border-bottom: 1px solid red;
-}
-
-.ruby_text_display{
-	color: #366775;
-	font-family: 'Slabo 27px', serif;
-}
-
-.more_info{
-	margin-bottom: 20px;
-}
-
-.more_info p{
-	font-size: 20px;
-	font-family: 'Slabo 27px', serif;
-	margin-top: 20px;
-}
-
-
-
-
-
