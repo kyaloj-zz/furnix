@@ -10,9 +10,20 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "homes.scss";
+@import "comments.scss";
+@import "demo.css";
+@import "furnitures.scss";
+@import "photos.scss";
+@import "scaffolds.scss";
+@import "shops.scss";
+@import "users.scss";
+
+
 
 *{
 	margin: 0;
@@ -26,52 +37,6 @@ body{
 	
 }
 
-.container{
-    text-align: center;
-    font-family: 'Slabo 27px', serif;
-
-}
-
-.furnix_navbar{
-	  background-color: transparent;
-      border-color: transparent;
-      text-decoration: none;
-      margin-top: 30px;
-
-}
-
-.general_navbar{
-  background-color: #366775;
-  
-}
-
-#logo{
-	color:white;
-	font-size: 40px;
-	font-family: 'Slabo 27px', serif;
-
-}
-
-.navbar-default .navbar-nav>li>a{
-	color: white;
-	font-size: 16px;
-
-     font-family: 'Slabo 27px', serif;
-}
-
-
-
-.the_head{
-   background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6) ), url('/products.jpg');
-   text-align: center;
-   background-size:cover;
-   background-repeat: no-repeat;
-   color: white;
-   height: 300px;
-   font-family: 'Slabo 27px', serif;
-   width:100%;
-  
-}
 
 .the_images{
 	width: 96%;
