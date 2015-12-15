@@ -14,7 +14,7 @@ devise_for :users, controllers: {registrations: "users/registrations"}  # devise
 
  
   resources :users
-   
+  resources :about
   
 
    root to: 'homes#index'
