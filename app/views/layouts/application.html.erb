@@ -12,51 +12,41 @@
 
   <link href='http://fonts.googleapis.com/css?family=Slabo+27px&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-   
-    
-  
 </head>
 
 
 <body>
+  <%= render 'layouts/navbar' %>
+  <div class="content-row"></div>
+  <%= yield %>
+  <div class="container" id="footers">
+    <footer>
+      <div class="row">
+         <div class="col-md-12 socials"> 
+          <a href="https://www.twitter.com/">
+             <img src="/twitter.png">
+           </a>
+          <a href="https://www.facebook.com/?_rdr">
+             <img src="/facebook.png">
+          </a>
+          <a href="https://plus.google.com/">
+             <img src="/g_plus.png">
+          </a>
+          <a href="http://www.skype.com/en/">
+             <img src="/skype.png">
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 copyright_part">    
+          <p> 
+           &copy Justus-<%= Time.new.strftime('%Y')%>
+          </p>
 
-
-    
-
-
-<%= yield %>
-
-
-<div class="container" id="footers">
-  <footer>
-    <div class="row">
-
-           <div class="col-md-12 socials"> 
-               <a href="https://www.twitter.com/">
-                    <img src="/twitter.png">
-               </a>
-              <a href="https://www.facebook.com/?_rdr">
-                 <img src="/facebook.png">
-              </a>
-              <a href="https://plus.google.com/">
-                 <img src="/g_plus.png">
-              </a>
-              <a href="http://www.skype.com/en/">
-                 <img src="/skype.png">
-              </a>
-          </div>
-         </div>
-        <div class="row">
-            <div class="col-md-12 copyright_part">    
-              <p> 
-                 &copy Justus-2015
-              </p>
-
-               <p id="copyright">Background Image Source: fovipa.com</p>
-            </div>  
-         </div>
-  </footer>
-</div>
-
-</body>
+         <p id="copyright">Background Image Source: fovipa.com</p>
+        </div>  
+     </div>
+   </footer>
+  </div>
+ </body>
 </html>
