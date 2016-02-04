@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 require 'rubygems'
-ruby '2.0.0'
+ruby '2.2.3'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
