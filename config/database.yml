@@ -9,7 +9,7 @@ default: &default
   encoding: utf8
   pool: 5
   timeout: 5000
-  host: localhost
+  host: 127.0.0.1
   username: furnix
   password: furnix
 
