@@ -10,22 +10,22 @@ default: &default
   pool: 5
   timeout: 5000
   host: 127.0.0.1
-  username: furnix
-  password: furnix
+  username: <%= ENV.fetch('DB_USER') %>
+  password: <%= ENV.fetch('DB_PASSWORD') %>
 
 development:
   <<: *default
-  database: app_development
+  database: furnix_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: app_test
+  database: furnix_test
 
 production:
   <<: *default
   host: 52.35.37.209
-  database: app_production
+  database: funix_production
 
