@@ -26,6 +26,5 @@ test:
 
 production:
   <<: *default
-  host: 52.35.37.209
   database: funix_production
 
