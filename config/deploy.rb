@@ -16,7 +16,7 @@ set :repository, 'git@github.com:kyaloj/furnix.git'
 set :branch, 'master'
 
 # For system-wide RVM install.
-set :rvm_path, '/home/ubuntu/.rvm/bin/rvm'
+# set :rvm_path, '/home/ubuntu/.rvm/bin/rvm'
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
@@ -37,9 +37,7 @@ task :environment do
   # For those using RVM, use this to load an RVM version@gemset.
   # invoke :'rvm:use[ruby-2.2.3]'
 
-  # queue %{
-  #   source /home/ubuntu/.rvm/bin/rvm
-  # }
+  queue %{ source /home/ubuntu/.rvm/bin/rvm }
 end
 
 # Put any custom mkdir's in here for when `mina setup` is ran.

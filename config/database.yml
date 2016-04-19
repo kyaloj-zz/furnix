@@ -25,6 +25,8 @@ test:
   database: furnix_test
 
 production:
-  <<: *default
+  adapter: mysql2
   database: app_production
+  encoding: utf8
+  pool: 5
 
