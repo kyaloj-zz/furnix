@@ -35,12 +35,10 @@ task :environment do
   # invoke :'rbenv:load'
 
   # For those using RVM, use this to load an RVM version@gemset.
-  # invoke :'rvm:use[ruby-1.9.3-p125@default]'
-  ruby_version = File.read('.ruby-version').strip
-  raise "Couldn't determine Ruby version: Do you have a file .ruby-version in your project root?" if ruby_version.empty?
+  # invoke :'rvm:use[ruby-2.2.3]'
+
   queue %{
     source /home/ubuntu/.rvm/bin/rvm
-    rvm use #{ruby_version} || exit 1
   }
 end
 
