@@ -9,7 +9,7 @@ default: &default
   encoding: utf8
   pool: 5
   timeout: 5000
-  host: 127.0.0.1
+  host: localhost
   username: <%= ENV.fetch('DB_USER') %>
   password: <%= ENV.fetch('DB_PASSWORD') %>
 
@@ -25,6 +25,8 @@ test:
   database: furnix_test
 
 production:
-  <<: *default
+  adapter: mysql2
   database: app_production
+  encoding: utf8
+  pool: 5
 
