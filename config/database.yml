@@ -4,8 +4,8 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: <%= ENV.fetch('DB_USER') %>
-  password: <%= ENV.fetch('DB_PASSWORD') %>
+  username: root
+  password: yungmulla01
   host    : localhost
 #  host: 172.16.27.211
   database: furnix_development
