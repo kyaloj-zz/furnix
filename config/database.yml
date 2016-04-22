@@ -19,5 +19,11 @@ test:
   database: furnix_test
 
 production:
-  <<: *default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+  host: localhost
+  username: <%= ENV.fetch('DB_USER') %>
+  password: <%= ENV.fetch('DB_PASSWORD') %>
   database: app_production
