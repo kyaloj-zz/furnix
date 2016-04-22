@@ -20,9 +20,6 @@ test:
   database: app_test
 
 production:
-  adapter: mysql2
+  <<: *default
   database: app_production
-  encoding: utf8
-  pool: 5
-  username: <%= ENV.fetch('DB_USER') %>
-  password: <%= ENV.fetch('DB_PASSWORD') %>
+  
