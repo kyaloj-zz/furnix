@@ -5,10 +5,10 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: yungmulla01
+  password: yungmulla
   host    : localhost
 #  host: 172.16.27.211
-  database: furnix_development
+  #database: furnix_development
   # socket: /tmp/mysql.sock
 
 development:
@@ -17,7 +17,7 @@ development:
 
 test:
   <<: *default
-  database: app_test
+  database: furnix_test
 
 production:
   <<: *default
