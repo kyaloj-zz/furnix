@@ -34,4 +34,9 @@ describe Furniture do
                 category: "MyText",
                 delivery: "MyText",).should be_valid
   end
+
+  it "returns a furniture's title as a string" do
+  furniture = FactoryGirl.create(:furniture, description: "Mulla")
+  furniture.description.should == "Mulla"
+end
 end
