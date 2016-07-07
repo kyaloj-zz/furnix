@@ -40,10 +40,23 @@ describe Furniture do
 	furniture.description.should == "Mulla"
   end
 
-  it "returns a sorted array of results that match" do
-  	@table = FactoryGirl.create(:furniture, title: "table")
-    @chair = FactoryGirl.create(:furniture, title: "chair")
-    @couch = FactoryGirl.create(:furniture, title: "couch")
-    Furniture.by_letter("c").should == [@chair, @couch]
+  describe "filter title by letter" do      
+    before :each do
+      @table = FactoryGirl.create(:furniture, title: "table")
+      @chair = FactoryGirl.create(:furniture, title: "chair")
+      @couch = FactoryGirl.create(:furniture, title: "couch")
+    end
+
+    context "matching letters" do
+      it "returns a sorted array of results that match" do
+        Furniture.by_letter("c").should == [@chair, @couch]
+      end
+    end
+
+    context "non-matching letters" do
+      it "does not return furnitures that don't start with the provided letter" do
+        Furniture.by_letter("c").should_not include @table
+      end
+    end
   end
 end
