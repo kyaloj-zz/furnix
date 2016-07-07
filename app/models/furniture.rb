@@ -12,4 +12,8 @@ class Furniture < ActiveRecord::Base
   def full_description
     '#{self.description}'
   end
+
+  def self.by_letter(letter)
+	where("title LIKE ?", "#{letter}%").order(:title)
+  end
 end

@@ -36,7 +36,14 @@ describe Furniture do
   end
 
   it "returns a furniture's title as a string" do
-  furniture = FactoryGirl.create(:furniture, description: "Mulla")
-  furniture.description.should == "Mulla"
-end
+	furniture = FactoryGirl.create(:furniture, description: "Mulla")
+	furniture.description.should == "Mulla"
+  end
+
+  it "returns a sorted array of results that match" do
+  	@table = FactoryGirl.create(:furniture, title: "table")
+    @chair = FactoryGirl.create(:furniture, title: "chair")
+    @couch = FactoryGirl.create(:furniture, title: "couch")
+    Furniture.by_letter("c").should == [@chair, @couch]
+  end
 end
