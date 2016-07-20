@@ -1,5 +1,4 @@
-require 'spec_helper'
-require 'rails_helper'
+#require 'spec_helper'
 
 describe Furniture do
   it "has a valid factory" do

@@ -1,5 +1,5 @@
 require 'faker'
-require 'rails_helper'
+#require 'spec_helper'
 FactoryGirl.define do
   factory :furniture do |f|
     f.title { Faker::Name.title }
